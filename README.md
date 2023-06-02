@@ -11,7 +11,7 @@ Ensure you maintain a good and descriptive readme.md file to facilitate others c
 
 ### GitHub is a remote central version control system.
 
-### Common Git commands :
+### Common Git commands:
 
 ```
 $ git clone repoURL.git                         ; clones or download the repository from GitHUb
