@@ -21,4 +21,13 @@ $ git push                                      ; pushes the changes that you've
 $ git pull                                      ; be in the folder repository, this will pull all the changes
 ```
 
+### How to authenticate from your local to GitHub ?
 
+```
+1) Github authentication works based on PAT. ( Personal Acccess Token )
+2) your profile on github ---> settings ---> Developer Settings  ----> Generate Classic PAT 
+3) When you do a git push, git prompts you to enter the PAT and that's it bingo. You're authenticated.
+
+PS : PAT is sensitive and is not supposed to be shared with anyone
+
+```
