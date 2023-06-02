@@ -3,7 +3,7 @@
 ## Start of the line in any bash script should always be a SHEBANG NOTATION.
 
 ## Apart from the first line, none of the lines are considered as shebang
-## Shebang notatin should always start with #
+## Shebang notatin should always start with #!
 
 ## Using this SHEBANG Notation, we are telling the system the interpretor to use to run this script.
 
