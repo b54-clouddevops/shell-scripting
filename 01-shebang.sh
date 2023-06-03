@@ -18,3 +18,8 @@
     # *   ./scriptName
 
 echo  Welcome to Batch54 Cloud DevOps Training
+
+# Pringing Multiple Lines 
+
+echo Line1
+echo Line2
