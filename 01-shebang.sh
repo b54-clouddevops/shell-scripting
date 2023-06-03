@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 ## Start of the line in any bash script should always be a SHEBANG NOTATION.
 
@@ -17,3 +17,4 @@
     # *   sh scriptName.sh 
     # *   ./scriptName
 
+echo  Welcome to Batch54 Cloud DevOps Training
