@@ -23,3 +23,4 @@ echo  Welcome to Batch54 Cloud DevOps Training
 
 echo Line1
 echo Line2
+echo Line3
