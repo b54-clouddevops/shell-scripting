@@ -1,3 +1,4 @@
 #!/bin/bash 
 
-echo "Good Morning and todays date is 03June2023"
+TODAYS_DATE="03JUNE2023"
+echo "Good Morning and todays date is $TODAYS_DATE"
