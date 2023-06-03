@@ -24,3 +24,12 @@ echo  Welcome to Batch54 Cloud DevOps Training
 echo Line1
 echo Line2
 echo Line3
+
+# In bash, we have escape sequence characters, using that we can add some power to the echo 
+
+#  \n  : new line
+# \t   : tab space                      
+
+echo -e "Line1\nLine2"
+
+echo -e "Line1\n\tLine2"
