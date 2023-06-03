@@ -17,7 +17,13 @@ a=10
 b=20
 c=30 
 
-
 # Syntax : $variableName : $ is going to print the value of the variable
 echo $a 
 echo Value of the variable a is $a
+echo Value of the variavle a is ${a}  
+echo "Value of the variable a is ${a}"
+
+echo "Value of the variable d is ${d}"
+
+# "Double Quotes "
+# 'Single Quotes'
