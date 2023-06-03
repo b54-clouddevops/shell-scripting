@@ -15,15 +15,18 @@
 # This is how we can declare variables in Bash 
 a=10 
 b=20
-c=30 
+c=30
 
 # Syntax : $variableName : $ is going to print the value of the variable
 echo $a 
-echo Value of the variable a is $a
-echo Value of the variavle a is ${a}  
-echo "Value of the variable a is ${a}"
+echo -e "Value of the variable a is \e[32m; $a \e0m"
+echo -e "Value of the variavle a is \e[32m; $a \e0m"
+echo -e "Value of the variable a is \e[32m; $a \e0m"
+echo -e "Value of the variable d is \e[32m; $a \e0m"
+# If you try to print a variable that is not declared, bash will consider that as a null rather an error 
 
-echo "Value of the variable d is ${d}"
+# rm -rf /data/${FOLDER_TO_DELETE}/ => rm -rf /data
 
 # "Double Quotes "
 # 'Single Quotes'
+
