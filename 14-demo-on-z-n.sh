@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-a=10
+# a=10
 
 if  [ -z "$var" ] ; then 
     echo "Value of a is declared"
