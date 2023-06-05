@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # Each and every color you see on terminal will have a color code and we need to use that code baesd on our need.
 
