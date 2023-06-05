@@ -60,7 +60,20 @@ ACTION=$1
 if [ "$ACTION" == "start" ] ; then 
         echo -e "\e[32m Starting RabbitMQ Service \e[0m"
         exit 0  
+
+elif [ "$ACTION" == "restart" ] ; then
+        echo -e "\e[33m restarting RabbitMQ Service \e[0m"
+        exit 1  
+
+elif [ "$ACTION" == "stop" ] ; then
+        echo -e "\e[33m Stopping RabbitMQ Service \e[0m"
+        exit 2  
+
+elif [ "$ACTION" == "enable" ] ; then
+        echo -e "\e[33m Enabling RabbitMQ Service \e[0m"
+        exit 3  
+
 else 
-        echo -e "\e[31m Available option is start only \e[0m"
-        exit 1
+        echo -e "\e[35m Available option are start --- stop --- restart  --- enable only \e[0m"
+        exit 4
 fi 
