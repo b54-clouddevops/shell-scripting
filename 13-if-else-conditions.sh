@@ -62,5 +62,5 @@ if [ "$ACTION" == "start" ] ; then
         exit 0  
 else 
         echo -e "\e[31m Available option is start only \e[0m"
-        exit 1 
+        exit 1
 fi 
