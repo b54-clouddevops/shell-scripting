@@ -9,3 +9,5 @@ a=53
 echo "Value of a is ${a}"
 echo Value of a is ${a}
 echo 'Value of a is ${a}'
+
+# '' : single quotes always eliminate the power of the special variable
