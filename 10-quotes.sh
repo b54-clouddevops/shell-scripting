@@ -7,3 +7,4 @@
 
 a=53
 echo "Value of a is ${a}"
+echo Value of a is ${a}
