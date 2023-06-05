@@ -22,3 +22,10 @@ ls -ltr   2>   op.txt   # Redirects only the standard errors.
 
 # How to do I come to know the exit code of the previously executed command ? ? ? 
 # $?    
+
+
+# Exit codes also plays a key role in debugging big scripts.
+
+# Ex : If you're having a big script and if your script fails and it's really challenging to figure out the mistake as it makes us to watch over the entie script from the beginning.
+# Instead, we can use exit codes everyWhere to find out where our script failes.
+
