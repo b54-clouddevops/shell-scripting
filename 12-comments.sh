@@ -5,7 +5,7 @@
 
 # In a scirpt, if you want to test something and if you want to eliminate some lines and run the script, then you can comment then, If you command, system don't recorgnize it as executable.
 
-echo "This is to demonstrate the usage of single line and multi line comments"
+echo "This is to demonstrate the usage of single line and multi-line comments"
 
 <<COMMENT
 a=10 
