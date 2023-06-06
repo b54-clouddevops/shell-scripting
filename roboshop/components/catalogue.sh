@@ -31,6 +31,7 @@ stat $?
 
 echo -n "Creating the Service Account :"
 useradd roboshop 
+stat $?
 
 
 # 1. Let's now set up the catalogue application.
