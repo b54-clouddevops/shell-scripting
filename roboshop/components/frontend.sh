@@ -41,6 +41,10 @@ mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $? 
 
 
+echo -n "Starting $COMPONENT service: "
+systemctl enable nginx 
+systemctl start nginx 
+stat $?
 
 # It's always a great idea to perform validation before you get an exception.
 # If the script is executed as a root user or as a sudo user, then it has to proceed.
