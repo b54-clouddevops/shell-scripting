@@ -34,20 +34,12 @@ stat $?
 
 echo -n "Extracting ${COMPOMENT} component :"
 unzip /tmp/${COMPONENT}.zip   &>> $LOGFILE
+mv $COMPINENT-main/*  .
 mv static/* .   &>> $LOGFILE
 rm -rf ${COMPONENT}-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $? 
 
-
-
-# cd /usr/share/nginx/html
-# rm -rf *
-# unzip /tmp/frontend.zip
-# mv frontend-main/* .
-# mv static/* .
-# rm -rf frontend-main README.md
-# mv localhost.conf /etc/nginx/default.d/roboshop.conf
 
 
 # It's always a great idea to perform validation before you get an exception.
