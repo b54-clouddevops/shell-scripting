@@ -2,6 +2,7 @@
 
 COMPONENT=catalogue
 LOGFILE="/tmp/${COMPONENT}.log"
+APPUSER="roboshop"
 
 ID=$(id -u)
 
@@ -29,10 +30,12 @@ echo -n "Installing NodeJS :"
 yum install nodejs -y   &>> $LOGFILE 
 stat $? 
 
-echo -n "Creating the Service Account :"
-useradd roboshop 
-stat $?
-
+id $APPUSER
+if [ $? -ne 0 ] ; then 
+    echo -n "Creating the Service Account :"
+    useradd $APPUSER 
+    stat $?
+fi 
 
 # 1. Let's now set up the catalogue application.
 
