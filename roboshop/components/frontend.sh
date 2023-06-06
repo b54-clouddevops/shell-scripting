@@ -19,6 +19,8 @@ stat() {
     fi 
 }
 
+echo -e "*********** \e[35m $COMPONENT Installation has started \e[0m ***********"
+
 echo -n "Installing Nginx :"
 yum install nginx -y  &>> $LOGFILE
 stat $?
@@ -45,6 +47,8 @@ echo -n "Starting $COMPONENT service: "
 systemctl enable nginx  &>> $LOGFILE
 systemctl start nginx   &>> $LOGFILE
 stat $?
+
+echo -e "*********** \e[35m $COMPONENT Installation has Completed \e[0m ***********"
 
 # It's always a great idea to perform validation before you get an exception.
 # If the script is executed as a root user or as a sudo user, then it has to proceed.
