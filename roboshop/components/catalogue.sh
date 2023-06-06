@@ -37,15 +37,22 @@ if [ $? -ne 0 ] ; then
     stat $?
 fi 
 
-# 1. Let's now set up the catalogue application.
+echo -n "Downloading the $COMPONENT component :"
+curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
+stat $? 
 
-# As part of operating system standards, we run all the applications and databases as a normal user but not with root user.
+echo -n "Copying the $COMPONENT to $APPUSER home directory :"
+cd /home/${APPUSER}/
+unzip -o /tmp/catalogue.zip  &>> $LOGFILE
+stat $?
 
-# So to run the catalogue service we choose to run as a normal user and that user name should be more relevant to the project. Hence we will use `roboshop` as the username to run the service.
 
-# ```bash
-# # useradd roboshop
 
-# ```
 
-# 1. So let's switch to the `roboshop` user and run the following commands.
+
+# $ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
+# $ cd /home/roboshop
+# $ unzip /tmp/catalogue.zip
+# $ mv catalogue-main catalogue
+# $ cd /home/roboshop/catalogue
+# $ npm install
