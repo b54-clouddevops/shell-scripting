@@ -24,11 +24,13 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans
 stat $? 
 
 echo -n "Installing $COMPONENT : "
-yum install -y mongodb-org   &>> $LOGFILE
+yum install -y $COMPONENT-org   &>> $LOGFILE
 stat $? 
 
-
-
+echo -n "Starting $COMPONENT : "
+systemctl enable mongod      &>> $LOGFILE
+systemctl start mongod       &>> $LOGFILE
+stat $?
 
 
 # 1. Install Mongo & Start Service.
