@@ -35,8 +35,8 @@ stat $?
 echo -n "Extracting ${COMPOMENT} component :"
 unzip /tmp/${COMPONENT}.zip   &>> $LOGFILE
 mv $COMPINENT-main/*  .
-mv static/* .   &>> $LOGFILE
-rm -rf ${COMPONENT}-main README.md
+mv static/* . 
+# rm -rf ${COMPONENT}-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 stat $? 
 
