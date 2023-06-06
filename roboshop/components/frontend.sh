@@ -27,11 +27,34 @@ else
     echo -e "\e[31m failure \e[0m"
 fi 
 
+echo -n "Performing Cleanup: "
+cd /usr/share/nginx/html
+rm -rf *   &>> "/tmp/${COMPONENT}.log" 
+
+if [ $? -eq 0 ] ; then 
+    echo -e "\e[32m success \e[0m"
+else 
+    echo -e "\e[31m failure \e[0m"
+fi 
+
+
+# cd /usr/share/nginx/html
+# rm -rf *
+# unzip /tmp/frontend.zip
+# mv frontend-main/* .
+# mv static/* .
+# rm -rf frontend-main README.md
+# mv localhost.conf /etc/nginx/default.d/roboshop.conf
+
+
 # It's always a great idea to perform validation before you get an exception.
 # If the script is executed as a root user or as a sudo user, then it has to proceed.
 # If not , I was to exit the script with some nice message.
 
 
+# The frontend is the service in RobotShop to serve the web content over Nginx.
+
+# Install Nginx.
 
 # ```
 # # yum install nginx -y
