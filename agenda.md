@@ -7,6 +7,13 @@ This is a repository created to publish all the Bash Bascis and project automati
 *   Then we will automate the infrastructure provisioning
 *   And then Configuration Management.
 
+### Things to look after when you write a shell script : 
+
+    * When you develop something, ensure you run it twice before you confirm it as WORKING.
+    * Ensure you remove the duplicate pieces of code.
+    * Validation should be given a very high priority. 
+    * Try to parameterize it as much as possible.
+
 
 # Bash Scripting Agenda
 
