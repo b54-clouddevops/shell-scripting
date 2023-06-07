@@ -22,7 +22,7 @@ if [ $? -ne 0 ] ; then
 fi 
 
 echo -n "Downloading the $COMPONENT component :"
-curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"
 stat $? 
 
 echo -n "Copying the $COMPONENT to $APPUSER home directory :"
@@ -54,11 +54,3 @@ stat $?
 
 
 echo -e "*********** \e[35m $COMPONENT Installation has Completed \e[0m ***********"
-
-
-# $ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
-# $ cd /home/roboshop
-# $ unzip /tmp/catalogue.zip
-# $ mv catalogue-main catalogue
-# $ cd /home/roboshop/catalogue
-# $ npm install
