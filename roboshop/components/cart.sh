@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-COMPONENT="user"
+COMPONENT="cart"
 
 source components/common.sh
 
@@ -28,7 +28,7 @@ stat $?
 echo -n "Copying the $COMPONENT to $APPUSER home directory :"
 cd /home/${APPUSER}/
 rm -rf  ${COMPONENT}  &>> $LOGFILE
-unzip -o /tmp/catalogue.zip  &>> $LOGFILE
+unzip -o /tmp/${COMPONENT}.zip  &>> $LOGFILE
 stat $?
 
 echo -n "Modifying the ownership :"
@@ -42,7 +42,7 @@ npm install  &>> $LOGFILE
 stat $?
 
 echo -n "Updating the $COMPONENT systemd file :"
-sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' /home/${APPUSER}/${COMPONENT}/systemd.service    
+sed -i -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' /home/${APPUSER}/${COMPONENT}/systemd.service    
 mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 stat $? 
 
