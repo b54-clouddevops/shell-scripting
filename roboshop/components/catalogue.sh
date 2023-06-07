@@ -53,7 +53,7 @@ stat $?
 
 echo -n "Generating npm $COMPONENT artifacts :"
 cd /home/${APPUSER}/${COMPONENT}/
-npm install 
+npm install  &>> $LOGFILE
 
 
 # $ curl -s -L -o /tmp/catalogue.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
