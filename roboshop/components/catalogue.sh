@@ -12,7 +12,7 @@ stat $?
 
 echo -n "Installing NodeJS :"
 yum install nodejs -y   &>> $LOGFILE 
-stat $? 
+stat $?
 
 id $APPUSER &>> $LOGFILE
 if [ $? -ne 0 ] ; then 
