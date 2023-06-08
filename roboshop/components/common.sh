@@ -99,7 +99,7 @@ NODEJS() {
 
 MVN_PACKAGE() {
     echo -n "Preparing $COMPONENT artifacts :"
-    cd /home/${APPUSER}/${COMPOMENT}
+    cd /home/${APPUSER}/${COMPONENT}
     mvn clean package   &>> $LOGFILE
     mv target/shipping-1.0.jar shipping.jar 
     stat $?
