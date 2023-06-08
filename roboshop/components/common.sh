@@ -128,6 +128,8 @@ PYTHON() {
     yum install python36 gcc python3-devel -y   &>> $LOGFILE 
     stat $? 
 
+    CREATE_USER                 # calling Create_user function to create the roboshop user account
+
     DOWNLOAD_AND_EXTRACT         # calling DOWNLOAD_AND_EXTRACT  function download the content
 
     echo -n "Installing $COMPONENT"
