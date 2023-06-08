@@ -44,10 +44,13 @@ curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${CO
 stat $? 
 
 echo -n "Extracting the $COMPONENT Schema:"
-cd /tmp 
-unzip -o /tmp/${COMPONENT}.zip 
+cd /tmp  
+unzip -o /tmp/${COMPONENT}.zip   &>> $LOGFILE
+stat $? 
+
+echo -n "Injecting the $COMPONENT Schema :"
 cd ${COMPONENT}-main 
-mysql -u root -pRoboShop@1 <shipping.sql
+mysql -u root -pRoboShop@1 <shipping.sql &>> $LOGFILE
 stat $? 
 
 
