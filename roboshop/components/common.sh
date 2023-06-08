@@ -121,3 +121,18 @@ JAVA() {
     CONFIGURE_SVC
 
 }
+
+
+PYTHON() {
+    echo -n "Installing Python and its dependencies :"
+    yum install python36 gcc python3-devel -y   &>> $LOGFILE 
+    stat $? 
+
+    DOWNLOAD_AND_EXTRACT         # calling DOWNLOAD_AND_EXTRACT  function download the content
+
+    echo -n "Installing $COMPONENT"
+    cd /home/${APPUSER}/${COMPONENT}/
+    pip3 install -r requirements.txt
+    stat $?
+  
+}
