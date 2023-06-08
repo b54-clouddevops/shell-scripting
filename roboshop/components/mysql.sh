@@ -4,6 +4,8 @@ COMPONENT="mysql"
 
 source components/common.sh
 
+echo -e "*********** \e[35m $COMPONENT Installation has started \e[0m ***********"
+
 echo -n "Configuring the $COMPONENT repo: "
 curl -s -L -o /etc/yum.repos.d/mysql.repo https://raw.githubusercontent.com/stans-robot-project/mysql/main/mysql.repo
 stat $? 
@@ -47,3 +49,8 @@ unzip -o /tmp/${COMPONENT}.zip
 cd ${COMPONENT}-main 
 mysql -u root -pRoboShop@1 <shipping.sql
 stat $? 
+
+
+echo -e "*********** \e[35m $COMPONENT Installation has Completed \e[0m ***********"
+
+    
