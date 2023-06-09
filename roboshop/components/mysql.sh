@@ -15,9 +15,9 @@ yum install mysql-community-server -y    &>> $LOGFILE
 stat $? 
 
 echo -n "Starting $COMPONENT :"
-systemctl enable mysqld    &>> $LOGFILE
+systemctl enable mysqld     &>> $LOGFILE
 systemctl start mysqld      &>> $LOGFILE
-stat $? 
+stat $?
 
 echo -n "Fetching default root password : "
 DEFAULT_ROOT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk  '{print $NF}')
