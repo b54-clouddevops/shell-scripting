@@ -12,7 +12,9 @@ echo -e "Security Group ID used to launch the EC2 is \e[35m $SG_ID \e[0m"
 
 echo -e "**** Launching Server **** "
 
-aws ec2 run-instances  --image-id ${AMI_ID}  --instance-type t3.micro   --security-group-ids $SG_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$COMPONENT}]" | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g' 
+IPADDRESS=$(aws ec2 run-instances  --image-id ${AMI_ID}  --instance-type t3.micro   --security-group-ids $SG_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$COMPONENT}]" | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
+
+echo -e "Private IP Address of $COMPONENT is \e[35m $IPADDRESS \e[0m"
          
         
         
