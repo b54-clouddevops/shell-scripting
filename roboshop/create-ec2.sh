@@ -9,7 +9,4 @@ echo -e "AMI ID used to launch the EC2 is \e[35m $AMI_ID \e[0m"
 echo -e "Security Group ID used to launch the EC2 is \e[35m $SG_ID \e[0m"
 
 echo -e "**** Launching Server **** "
-aws ec2 run-instances --image-id ${AMI_ID}  --instance-type t2.micro
-   
-
-    
+aws ec2 run-instances --image-id ${AMI_ID}  --instance-type t3.micro | jq .
