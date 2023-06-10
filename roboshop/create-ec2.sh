@@ -27,7 +27,7 @@ echo -e "Private IP Address of $COMPONENT is \e[35m $IPADDRESS \e[0m"
 
 echo -n "\e[36m **** Creating DNS Record for the $COMPONENT : **** \e[0m"
 
-sed -e "s/COMPONENT/${COMPONENT}/"  -e "s/IPADDRESS/${IPADDRESS}/" roboshop/route53.json > /tmp/record.json
+sed -e "s/COMPONENT/${COMPONENT}/"  -e "s/IPADDRESS/${IPADDRESS}/" route53.json > /tmp/record.json
 aws route53 change-resource-record-sets --hosted-zone-id $HOSTEDZONEID --change-batch file:///tmp/record.json
 
          
